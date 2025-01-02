@@ -19,7 +19,6 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: rgb(228, 228, 228);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -38,40 +37,62 @@ nav {
     padding: 1rem 2rem;
 }
 
-.logo {
-    background-image: url("");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 50%;
-    height: 50%;
 
+.logo {
+    display: flex; /* Alinea la imagen y el texto horizontalmente */
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+    gap: 0.5rem; /* Espacio entre la imagen y el texto */
     font-size: 1.5rem;
     font-weight: 600;
     color: #333;
+    margin-left: 20px;
+}
+
+.logo img {
+    width: 40px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 40px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    margin-right: 40px;
 }
 
 .nav-links li a {
     text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
     color: #333;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
+    position: relative; /* Agrega esta línea para que la línea azul se muestre debajo del link */
 }
 
-
 .nav-links li a:hover {
-    color: #410101;
+    color: #0308aa;
+    transform: scale(1.1);
+}
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Ajusta esta línea para que la línea azul se muestre debajo del link */
+    width: 0;
+    height: 2px;
+    background-color: #0308aa; /* Cambia el color de la línea azul a un tono más claro */
+    transition: width 0.3s ease-in-out; /* Ajusta la transición para que sea más suave */
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
 }
 
 .video-container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
     margin-top: 0;
 }
@@ -107,4 +128,123 @@ video.video-background {
 
 body {
     padding-bottom: 100px;
+}
+
+.container-text {
+    position: relative; /* Para asegurar que el texto esté sobre la imagen de fondo */
+    width: 100%; /* Ancho completo */
+    height: 50vh; /* Altura completa de la ventana */
+    background-image: url('../img/fondo.png'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 0); /* Color del texto */
+    font-size: 2.4rem; /* Tamaño del texto */
+    font-weight:600;
+    font-family: 'Montserrat', sans-serif; /* Fuente del texto */
+}
+
+
+.presentation {
+    text-align: center; /* Centra el contenido */
+    padding: 2rem 1rem; /* Espaciado interno */
+    background-color: #ffffff; /* Color de fondo */
+    margin-top: 100px; /* Elimina el margen superior */
+}
+
+.presentation h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem; /* Reducido para acercar al h1 */
+}
+
+.presentation h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 0; /* Eliminado para acercar al h2 */
+}
+
+.presentation p {
+    font-family: 'Montserrat', sans-serif; /* Fuente de la descripción */
+    font-size: 1.1rem; /* Tamaño del texto */
+    color: #555; /* Color del texto */
+    max-width: 800px; /* Limita el ancho del texto */
+    margin: 0 auto; /* Centra el párrafo */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+.pilares {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pilar {
+    width: 25%;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 0.5px solid rgba(167, 167, 167, 0.822); /* Grosor, estilo y color */
+      
+}
+
+.cultura {
+    width: 100%;
+    height: 150px;
+    background-image: url('../img/cultura.jpg');
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.gastronomia {
+    width: 100%;
+    height: 150px;
+    background-image: url('../img/gastronomia.jpg');
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.paisajes {
+    width: 100%;
+    height: 150px;
+    background-image: url('../img/paisajes.jpg');
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.moda {
+    width: 100%;
+    height: 150px;
+    background-image: url('../img/moda.jpg');
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.pilar h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.pilar p {
+    font-size: 14px;
+    color: #666;
+    margin-top: -20px; 
+    padding: 10px;
 }
