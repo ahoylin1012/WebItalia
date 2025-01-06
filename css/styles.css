@@ -307,7 +307,7 @@ body {
 .mapa-container iframe {
     width: 100%;
     /* Ocupa todo el ancho del contenedor */
-    height: 600px;
+    height: 100vh;
     /* Ajusta la altura según sea necesario */
     border: none;
     /* Elimina el borde del iframe */
@@ -575,6 +575,183 @@ body {
     color: #555; /* Color del texto */
     line-height: 1.6; /* Espaciado entre líneas */
 }
+
+
+
+.oficina-turismo {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.oficina-turismo h1{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 0;
+    /* Eliminado para acercar al h2 */
+}
+
+.oficina-turismo h2{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    /* Reducido para acercar al h1 */
+}
+
+.oficina-turismo p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.equipo-empresa {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.equipo-empresa h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.miembros-equipo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.miembro {
+    width: 30%;
+    margin: 20px;
+    text-align: center;
+}
+
+.miembro img {
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+}
+
+.miembro h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.miembro p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/*SECCION CONTACT*/
+.contact-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    color: #003366;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    color: #022460;
+}
+
+.contact-section p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 48%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+}
+
+.submit-btn {
+    background-color: #022460;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #030749;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    max-width: 48%;
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.contact-info p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form, .contact-info {
+        max-width: 100%;
+    }
+}
+
 /* Estilos generales del footer */
 footer {
     background-color: #003366;
