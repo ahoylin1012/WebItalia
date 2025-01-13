@@ -40,11 +40,8 @@ nav {
 
 .logo {
     display: flex;
-    /* Alinea la imagen y el texto horizontalmente */
     align-items: center;
-    /* Centra verticalmente la imagen y el texto */
     gap: 0.5rem;
-    /* Espacio entre la imagen y el texto */
     font-size: 1.5rem;
     font-weight: 600;
     color: #333;
@@ -53,7 +50,6 @@ nav {
 
 .logo img {
     width: 40px;
-    /* Ajusta el tamaño de la imagen según sea necesario */
     height: 40px;
 }
 
@@ -71,7 +67,6 @@ nav {
     color: #333;
     transition: color 0.3s, transform 0.3s;
     position: relative;
-    /* Agrega esta línea para que la línea azul se muestre debajo del link */
 }
 
 .nav-links li a:hover {
@@ -84,17 +79,48 @@ nav {
     position: absolute;
     left: 0;
     bottom: -2px;
-    /* Ajusta esta línea para que la línea azul se muestre debajo del link */
     width: 0;
     height: 2px;
     background-color: #0308aa;
-    /* Cambia el color de la línea azul a un tono más claro */
     transition: width 0.3s ease-in-out;
-    /* Ajusta la transición para que sea más suave */
 }
 
 .nav-links li a:hover::after {
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .nav-links {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 1rem 1rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-links li a {
+        font-size: 1rem;
+    }
 }
 
 .video-container {
@@ -114,6 +140,18 @@ video.video-background {
     object-fit: cover;
 }
 
+@media (max-width: 768px) {
+    .video-container {
+        height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container {
+        height: 70vh;
+    }
+}
+
 .content {
     position: absolute;
     top: 50%;
@@ -121,7 +159,7 @@ video.video-background {
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    z-index: 10;
+
 }
 
 .content h1 {
@@ -140,40 +178,27 @@ body {
 
 .container-text {
     position: relative;
-    /* Para asegurar que el texto esté sobre la imagen de fondo */
     width: 100%;
-    /* Ancho completo */
     height: 50vh;
-    /* Altura completa de la ventana */
     background-image: url('../img/fondo.png');
-    /* Ruta de la imagen de fondo */
     background-size: cover;
-    /* Ajusta la imagen para cubrir todo el contenedor */
     background-position: center;
-    /* Centra la imagen de fondo */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: rgb(0, 0, 0);
-    /* Color del texto */
     font-size: 2.4rem;
-    /* Tamaño del texto */
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
-    /* Fuente del texto */
 }
 
 
 .presentation {
     text-align: center;
-    /* Centra el contenido */
     padding: 2rem 1rem;
-    /* Espaciado interno */
     background-color: #ffffff;
-    /* Color de fondo */
     margin-top: 100px;
-    /* Elimina el margen superior */
 }
 
 .presentation h2 {
@@ -182,7 +207,6 @@ body {
     font-size: 1rem;
     color: #333;
     margin-bottom: 0.5rem;
-    /* Reducido para acercar al h1 */
 }
 
 .presentation h1 {
@@ -191,22 +215,45 @@ body {
     font-weight: 600;
     color: #000000;
     margin-top: 0;
-    /* Eliminado para acercar al h2 */
 }
 
 .presentation p {
     font-family: 'Montserrat', sans-serif;
-    /* Fuente de la descripción */
     font-size: 1.1rem;
-    /* Tamaño del texto */
     color: #555;
-    /* Color del texto */
     max-width: 800px;
-    /* Limita el ancho del texto */
     margin: 0 auto;
-    /* Centra el párrafo */
     line-height: 1.6;
-    /* Espaciado entre líneas */
+}
+
+@media (max-width: 768px) {
+    .presentation {
+        padding: 1rem 0.5rem;
+    }
+
+    .presentation h1 {
+        font-size: 2rem;
+    }
+
+    .presentation p {
+        font-size: 1rem;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .presentation {
+        padding: 0.5rem 0.2rem;
+    }
+
+    .presentation h1 {
+        font-size: 1.5rem;
+    }
+
+    .presentation p {
+        font-size: 0.9rem;
+        max-width: 400px;
+    }
 }
 
 .pilares {
@@ -222,23 +269,17 @@ body {
     border-radius: 10px;
     border: 0.5px solid rgba(167, 167, 167, 0.822);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Agrega transición para suavizar el efecto */
 }
 
 .pilares a {
     text-decoration: none;
-    /* Elimina el subrayado */
     color: inherit;
-    /* Hereda el color del texto */
 }
 
 .pilar:hover {
     transform: scale(1.05);
-    /* Aumenta ligeramente el tamaño */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Agrega sombra */
     cursor: pointer;
-    /* Cambia el cursor a una mano */
 }
 
 .cultura {
@@ -295,22 +336,42 @@ body {
     padding: 10px;
 }
 
+@media (max-width: 768px) {
+    .pilar {
+        width: 50%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pilar {
+        width: 100%;
+        margin: 5px;
+    }
+}
+
 .mapa-container {
     width: 100%;
-    /* Ocupa todo el ancho de la página */
     margin-top: 150px;
-    /* Margen superior grande */
     padding: 0;
-    /* Elimina el padding para que ocupe todo el ancho */
 }
 
 .mapa-container iframe {
     width: 100%;
-    /* Ocupa todo el ancho del contenedor */
     height: 100vh;
-    /* Ajusta la altura según sea necesario */
     border: none;
-    /* Elimina el borde del iframe */
+}
+
+@media (max-width: 768px) {
+    .mapa-container iframe {
+        height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .mapa-container iframe {
+        height: 60vh;
+    }
 }
 
 .secciones-container {
@@ -323,60 +384,46 @@ body {
 
 .seccion1 {
     width: 200px;
-    /* Ancho fijo para cada caja */
     color: white;
     border-radius: 10px;
     background-color: rgb(0, 64, 0);
     border: 0.5px solid rgba(167, 167, 167, 0.822);
-    /* Borde sutil */
     text-align: center;
-    /* Centra el contenido */
 }
 
 .seccion2 {
     width: 200px;
-    /* Ancho fijo para cada caja */
     color: white;
     border-radius: 10px;
     background-color: rgb(113, 0, 6);
     border: 0.5px solid rgba(167, 167, 167, 0.822);
-    /* Borde sutil */
     text-align: center;
-    /* Centra el contenido */
 }
 
 .seccion3 {
     width: 200px;
-    /* Ancho fijo para cada caja */
     color: white;
     border-radius: 10px;
     background-color: rgb(73, 6, 102);
     border: 0.5px solid rgba(167, 167, 167, 0.822);
-    /* Borde sutil */
     text-align: center;
-    /* Centra el contenido */
 }
 
 .seccion4 {
     width: 200px;
-    /* Ancho fijo para cada caja */
     color: white;
     border-radius: 10px;
     background-color: rgb(9, 3, 112);
     border: 0.5px solid rgba(167, 167, 167, 0.822);
-    /* Borde sutil */
     text-align: center;
-    /* Centra el contenido */
 }
 
-/* Estilos para los títulos h3 dentro de cada sección */
 .seccion1 h3,
 .seccion2 h3,
 .seccion3 h3,
 .seccion4 h3 {
     font-size: 18px;
     font-weight: 500;
-    /* Cambia el grosor de la fuente a negrita */
     padding: 10px;
 }
 
@@ -385,15 +432,11 @@ body {
 .seccion3,
 .seccion4 {
     width: 200px;
-    /* Ancho fijo para cada caja */
     color: white;
     border-radius: 10px;
     border: 0.5px solid rgba(167, 167, 167, 0.822);
-    /* Borde sutil */
     text-align: center;
-    /* Centra el contenido */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Agrega transición para suavizar el efecto */
 }
 
 .seccion1:hover,
@@ -401,23 +444,40 @@ body {
 .seccion3:hover,
 .seccion4:hover {
     transform: scale(1.05);
-    /* Aumenta ligeramente el tamaño */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Agrega sombra */
     cursor: pointer;
-    /* Cambia el cursor a una mano */
 }
 
 .secciones-container a {
     text-decoration: none;
 }
 
-/* Clases para las imágenes de fondo */
+@media (max-width: 768px) {
+
+    .seccion1,
+    .seccion2,
+    .seccion3,
+    .seccion4 {
+        width: 40%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .seccion1,
+    .seccion2,
+    .seccion3,
+    .seccion4 {
+        width: 80%;
+        margin: 5px;
+    }
+}
+
 .naturaleza {
     width: 100%;
     height: 150px;
     background-image: url('../img/naturaleza.jpg');
-    /* Ruta de la imagen */
     background-size: cover;
     background-position: center;
     border-top-right-radius: 10px;
@@ -428,7 +488,6 @@ body {
     width: 100%;
     height: 150px;
     background-image: url('../img/arteCultura.jpg');
-    /* Ruta de la imagen */
     background-size: cover;
     background-position: center;
     border-top-right-radius: 10px;
@@ -439,7 +498,6 @@ body {
     width: 100%;
     height: 150px;
     background-image: url('../img/enogastronomia.jpg');
-    /* Ruta de la imagen */
     background-size: cover;
     background-position: center;
     border-top-right-radius: 10px;
@@ -450,36 +508,202 @@ body {
     width: 100%;
     height: 150px;
     background-image: url('../img/deportes.jpg');
-    /* Ruta de la imagen */
     background-size: cover;
     background-position: center;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
 
-.aboutHeader {
-    position: relative;
-    width: 100%; /* Ocupa el 100% del ancho disponible */
-    height: 80vh; /* Altura del 90% de la ventana */
-    margin-top: 0; /* Elimina el margen superior */
+.galeria {
+    background-color: #ffffff;
+    padding: 0px 40px;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.galeria h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    margin-top: 200px;
+}
+
+.galeria h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+
+.galeria p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    margin-bottom: 100px;
+}
+
+
+.collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.collage.aparece {
+    transform: scale(1);
+    opacity: 1;
+    animation: entrada 1s;
+}
+
+.florencia {
+    background-image: url('../img/florencia.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.milan {
+    background-image: url('../img/milan.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.lagos {
+    background-image: url('../img/lagos.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.napoles {
+    background-image: url('../img/napoles.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.pompeya {
+    background-image: url('../img/pompeya.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.pisa {
+    background-image: url('../img/pisa.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.florencia:hover,
+.milan:hover,
+.lagos:hover,
+.napoles:hover,
+.pompeya:hover,
+.pisa:hover {
+    transform: translateZ(50px) scale(1.2);
+    transition: transform 0.8s;
+}
+
+@media (max-width: 768px) {
+    .galeria {
+        padding: 0px 20px;
+    }
+
+    .galeria h1 {
+        font-size: 2rem;
+    }
+
+    .galeria p {
+        font-size: 1rem;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria {
+        padding: 0px 10px;
+    }
+
+    .galeria h1 {
+        font-size: 1.5rem;
+    }
+
+    .galeria p {
+        font-size: 0.9rem;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .florencia,
+    .milan,
+    .lagos,
+    .napoles,
+    .pompeya,
+    .pisa {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .florencia,
+    .milan,
+    .lagos,
+    .napoles,
+    .pompeya,
+    .pisa {
+        height: 150px;
+    }
 }
 
 .aboutHeader img {
-    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
-    height: 100%; /* La imagen ocupa el 100% de la altura del contenedor */
-    display: block; /* Elimina espacios no deseados debajo de la imagen */
-}
-/* Estilos para la nueva sección */
-.apartados {
-    padding: 40px 20px; /* Espaciado interno */
-    background-color: #ffffff; /* Color de fondo */
-    margin-top: 20px; /* Espacio superior */
+    width: 100%;
+    height: 100%;
 }
 
-.titulo-principal{
+@media (max-width: 768px) {
+    .aboutHeader img {
+        height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutHeader img {
+        height: 60vh;
+    }
+}
+
+.apartados {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin-top: 20px;
+}
+
+.titulo-principal {
     text-align: center;
     margin-bottom: 120px;
-    font-size: 1.8rem; /* Tamaño de fuente absoluto */
+    font-size: 1.8rem;
 }
 
 .titulo-principal h2 {
@@ -488,7 +712,6 @@ body {
     font-size: 1.3rem;
     color: #333;
     margin-bottom: 0.5rem;
-    /* Reducido para acercar al h1 */
 }
 
 .titulo-principal h1 {
@@ -497,86 +720,106 @@ body {
     font-weight: 600;
     color: #000000;
     margin-top: 0;
-    /* Eliminado para acercar al h2 */
 }
 
 .apartado {
     margin-top: 100px;
-    margin: 30 auto; /* Centrar el contenido */
-    display: flex; /* Usar flexbox para alinear elementos */
-    align-items: flex-start; /* Alinear elementos al inicio */
-    gap: 40px; /* Espacio entre la imagen y el texto */
+    margin: 30 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
 }
 
 .img1 {
-    flex: 1; /* Ocupa 1 parte del espacio disponible */
-    background-image: url('../img/cultura.jpg'); /* Ruta de la imagen */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el espacio */
-    background-position: center; /* Centra la imagen */
-    border-radius: 2px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    height: 220px; /* Altura de la imagen */
+    flex: 1;
+    background-image: url('../img/cultura.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 220px;
 }
+
 .img2 {
-    flex: 1; /* Ocupa 1 parte del espacio disponible */
-    background-image: url('../img/gastronomia.jpg'); /* Ruta de la imagen */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el espacio */
-    background-position: center; /* Centra la imagen */
-    border-radius: 2px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    height: 240px; /* Alto de la imagen */
+    flex: 1;
+    background-image: url('../img/gastronomia.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 240px;
 }
 
 .img3 {
-    flex: 1; /* Ocupa 1 parte del espacio disponible */
-    background-image: url('../img/paisajes.jpg'); /* Ruta de la imagen */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el espacio */
-    background-position: center; /* Centra la imagen */
-    border-radius: 2px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    height: 240px; /* Alto de la imagen */
+    flex: 1;
+    background-image: url('../img/paisajes.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 240px;
 }
 
 .img4 {
-    flex: 1; /* Ocupa 1 parte del espacio disponible */
-    background-image: url('../img/moda.jpg'); /* Ruta de la imagen */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el espacio */
-    background-position: center; /* Centra la imagen */
-    border-radius: 2px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    height: 240px; /* Alto de la imagen */
+    flex: 1;
+    background-image: url('../img/moda.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 240px;
 }
 
 .texto-culture,
 .texto-gastronomy,
 .texto-landscape,
-.texto-fashion{
+.texto-fashion {
     flex: 2;
 }
 
 .section-title {
-    font-size: 2.2rem; /* Tamaño del título */
-    font-weight: 600; /* Grosor de la fuente */
-    color: #000000; /* Color del texto */
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #000000;
     text-align: left;
 }
 
 .section-culture {
     margin-right: 10px;
-    font-size: 1.1rem; /* Tamaño del texto */
-    color: #555; /* Color del texto */
-    line-height: 1.6; /* Espaciado entre líneas */
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
 }
 
 .section-culture2 {
     margin-left: 10px;
     margin-top: 20px;
-    font-size: 1.1rem; /* Tamaño del texto */
-    color: #555; /* Color del texto */
-    line-height: 1.6; /* Espaciado entre líneas */
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
 }
 
+@media (max-width: 768px) {
 
+    .img1,
+    .img2,
+    .img3,
+    .img4 {
+        height: 200px;
+        min-height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .img1,
+    .img2,
+    .img3,
+    .img4 {
+        height: 150px;
+        min-height: 100px;
+    }
+}
 
 .oficina-turismo {
     background-color: #ffffff;
@@ -584,24 +827,22 @@ body {
     margin-top: 20px;
 }
 
-.oficina-turismo h1{
+.oficina-turismo h1 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 2.5rem;
     font-weight: 600;
     color: #000000;
     margin-top: 0;
-    /* Eliminado para acercar al h2 */
 }
 
-.oficina-turismo h2{
+.oficina-turismo h2 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-weight: 400;
     font-size: 1.3rem;
     color: #333;
     margin-bottom: 0.5rem;
-    /* Reducido para acercar al h1 */
 }
 
 .oficina-turismo p {
@@ -609,48 +850,250 @@ body {
     text-align: center;
 }
 
+
 .equipo-empresa {
+    padding: 50px;
     background-color: #ffffff;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-.equipo-empresa h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.miembros-equipo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.miembro {
-    width: 30%;
-    margin: 20px;
     text-align: center;
 }
 
-.miembro img {
-    background-size: cover;
-    width: 150px;
-    height: 150px;
+.titulo-empleados {
+    text-align: center;
+    margin-bottom: 120px;
+    font-size: 1.8rem;
 }
 
-.miembro h3 {
+.titulo-empleados h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.titulo-empleados p {
     font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
+    text-align: center;
 }
 
-.miembro p {
-    font-size: 16px;
+.titulo-empleados h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 0;
+}
+
+.toursHeader {
+    background-image: url('../img/toursHeader.jpg');
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+#tours {
+    padding: 50px 20px;
+    background-color: #ffffff;
     margin-bottom: 20px;
 }
 
-/*SECCION CONTACT*/
+#tours h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+#tours p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.tour {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+
+.tour-image {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.tour-info {
+    width: 50%;
+    text-align: left;
+}
+
+.tour-info h3 {
+    font-size: 1.8em;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.tour-info p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #553;
+}
+
+.tour-info p strong {
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .tour {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tour-image {
+        width: 100%;
+    }
+
+    .tour-info {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #tours h2 {
+        font-size: 2em;
+    }
+
+    #tours p {
+        font-size: 16px;
+    }
+
+    .tour-info h3 {
+        font-size: 1.5em;
+    }
+
+    .tour-info p {
+        font-size: 0.9em;
+    }
+}
+
+.intereses {
+    text-align: center;
+    margin-bottom: 120px;
+    font-size: 1.3rem;
+    padding: 10px;
+}
+
+.intereses h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.intereses h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 0;
+}
+
+.nature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    margin-bottom: 100px;
+    padding: 30px;
+}
+
+.imagen-naturaleza {
+    background-image: url("../img/nature.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 600px;
+    height: 300px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.imagen-art {
+    background-image: url("../img/arteCultura.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 600px;
+    height: 300px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.imagen-gastro {
+    background-image: url("../img/gastronomia.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 600px;
+    height: 300px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.imagen-fashion {
+    background-image: url("../img/deportes.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 600px;
+    height: 300px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.texto-nature {
+    margin-left: 50px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #000000;
+    text-align: left;
+}
+
+.section-naturaleza {
+    margin-right: 10px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+
+    .imagen-naturaleza,
+    .imagen-art,
+    .imagen-gastro,
+    .imagen-fashion {
+        width: 100%;
+        height: 200px;
+        min-height: 150px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .imagen-naturaleza,
+    .imagen-art,
+    .imagen-gastro,
+    .imagen-fashion {
+        height: 150px;
+        min-height: 100px;
+    }
+}
+
 .contact-section {
     background-color: #ffffff;
     padding: 60px 20px;
@@ -696,16 +1139,12 @@ label {
     margin-bottom: 5px;
 }
 
-input, textarea {
+input {
     width: 100%;
     padding: 10px;
     border: 1px solid #cccccc;
     border-radius: 5px;
     font-size: 16px;
-}
-
-textarea {
-    resize: none;
 }
 
 .submit-btn {
@@ -741,53 +1180,46 @@ textarea {
     line-height: 1.8;
 }
 
-/* Ajustes responsivos */
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
     }
 
-    .contact-form, .contact-info {
+    .contact-form,
+    .contact-info {
         max-width: 100%;
     }
 }
 
-/* Estilos generales del footer */
 footer {
     background-color: #003366;
-    /* Azul oscuro */
     color: white;
     padding: 20px;
-    margin-top: 150px;
-    /* Espacio superior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Contenedor del footer */
 .footer-container {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
-/* Estilos para la imagen */
 .footer-image img {
     width: 250px;
-    /* Ajusta el tamaño de la imagen */
-    height: 50vh;
-    border-radius: 10px;
-    /* Bordes redondeados */
-    object-fit: cover;
-    /* Asegura que la imagen cubra el espacio */
-    opacity: 0.6
-        /* Opacidad */
+    height: 80%;
+    border-radius: 5px;
+    margin-top: 25px;
 }
 
-/* Estilos para el texto */
-.footer-text {
-    margin-left: 200px;
-    /* Espacio entre la imagen y el texto */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    padding-left: 20px;
 }
 
 .footer-text h3 {
@@ -795,22 +1227,68 @@ footer {
     margin-bottom: 10px;
 }
 
-.footer-text ul {
-    list-style: none;
-    padding: 0;
+.footer-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
-.footer-text ul li {
-    margin-bottom: 8px;
+.footer-text {
+    margin-right: 30px;
 }
 
-.footer-text ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
+.footer-details h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-.footer-text ul li a:hover {
-    color: #ffcc00;
-    /* Cambia el color al pasar el mouse */
+.footer-details p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-image img {
+        width: 200px;
+        height: 60%;
+    }
+
+    .footer-content {
+        padding-left: 0;
+    }
+
+    .footer-text {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-image img {
+        width: 150px;
+        height: 50%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-text {
+        margin-bottom: 20px;
+    }
 }

@@ -31,7 +31,6 @@
             <p>Do you have any questions or need help? Write to us!</p>
 
             <div class="contact-container">
-                <!-- Formulario de contacto -->
                 <form class="contact-form">
                     <div class="form-group">
                         <label for="name">Name:</label>
@@ -43,24 +42,23 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..."
-                            required></textarea>
+                        <input id="message" name="message" rows="5" placeholder="Write your message here..."
+                            required></input>
                     </div>
                     <button type="submit" class="submit-btn">Submit</button>
                 </form>
 
-                <!-- Información de contacto -->
                 <div class="contact-info">
                     <h3>Info</h3>
                     <p><strong>Phone:</strong> +34 123 456 789</p>
                     <p><strong>Email:</strong> tourismoffice@gmail.com</p>
-                    <p><strong>Address:</strong> C/ Corta 123, Roma, Italy</p>
+                    <p><strong>Address:</strong> C/ Prediera 123, Roma, Italy</p>
                 </div>
             </div>
         </div>
     </section>
     <section class="mapa-container">
-        <iframe 
+        <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4339623.992993836!2d5.3632646357794185!3d42.4820689989485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132aba849d6d8d3b%3A0x83b0a9bf42d68e62!2sItalia%20Turismo!5e0!3m2!1ses!2ses!4v1736182397487!5m2!1ses!2ses"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -70,23 +68,33 @@
             <div class="footer-image">
                 <img src="./img/footer.jpg">
             </div>
-            <div class="footer-text">
-                <h3>Atención al Cliente</h3>
-                <ul>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Preguntas Frecuentes</a></li>
-                    <li><a href="#">Términos y Condiciones</a></li>
-                </ul>
-                <h3>Secciones</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Tours</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+
+            <div class="footer-content">
+                <div class="footer-text">
+                    <h3>About us</h3>
+                    <p>
+                        Dedicated to offering unique experiences to our clients,</br> we take you to explore
+                        best of Italy.
+                        </br>Discover history, culture and stunning landscapes on each tour.
+                    </p>
+                </div>
+
+                <div class="footer-details">
+                    <h3>Additional information</h3>
+                    <p>
+                        Telephone: +39 123 456 789 <br>
+                        Email: tourismoffice@gmail.com <br>
+                        Office Hours: Monday to Friday, 9:00 AM - 6:00 PM
+                    </p>
+                </div>
             </div>
         </div>
+
+        <div class="footer-bottom">
+            <p>Tournée in Italia 2025. Tutti i diritti riservati.</p>
+        </div>
     </footer>
+
 </body>
 
 </html>
