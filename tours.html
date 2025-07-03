@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viajes Italia</title>
     <link rel="stylesheet" href="../practica5/css/styles.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -19,58 +19,64 @@
             <ul class="nav-links">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
-                <li><a href="#tours">Tours</a></li>
+                <li><a href="./tours.html">Tours</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <div class="toursHeader"></div>
+
     <section id="tours">
-        <h2>Italy Tours</h2>
-        <p>Explore the beauty of Italy with our routes designed for you to discover the best of each destination in a
-            only day.</p>
-
-        <div class="tour">
-            <img src="./img/ruta-florencia.jpg">
-            <div class="tour-info">
-                <h3>Route through Florence</h3>
-                <p>Discover the heart of the Renaissance by visiting the Cathedral of Santa Maria del Fiore, the Ponte
-                    Vecchio
-                    and the Boboli Gardens.</p>
-                <p><strong>Duration:</strong> 8 hours</p>
-                <p><strong>Includes:</strong> Expert guide, museum tickets</p>
-                <p><strong>Price:</strong> €60</p>
-            </div>
+        <div class="titulo-principal"> <h2>DISCOVER</h2> <h1>Italy Tours</h1>
+            <p>Explore the beauty of Italy with our routes designed for you to discover the best of each destination in a
+                only day.</p>
         </div>
 
-        <div class="tour">
-            <img src="./img/ruta-roma.jpg">
-            <div class="tour-info">
-                <h3>Route through Rome</h3>
-                <p>Explore the Eternal City by visiting the Colosseum, Roman Forum and Vatican City, full of
-                    history and culture.</p>
-                <p><strong>Duration:</strong> 10 hours</p>
-                <p><strong>Includes:</strong> Transportation, tour guide</p>
-                <p><strong>Price:</strong> €50</p>
+        <div class="tour-grid-container"> <div class="tour-card">
+                <img src="./img/ruta-florencia.jpg" alt="Florence Route">
+                <div class="tour-info">
+                    <h3>Route through Florence</h3>
+                    <p class="tour-description">Discover the heart of the Renaissance by visiting the Cathedral of Santa Maria del Fiore, the Ponte
+                        Vecchio and the Boboli Gardens.</p>
+                    <p class="tour-detail"><i class="far fa-clock"></i> <strong>Duration:</strong> 8 hours</p>
+                    <p class="tour-detail"><i class="fas fa-hand-holding-usd"></i> <strong>Includes:</strong> Expert guide, museum tickets</p>
+                    <p class="tour-price"><strong>Price:</strong> €60</p>
+                    <a href="#" class="tour-button">View Details</a>
+                </div>
             </div>
-        </div>
 
-        <div class="tour">
-            <img src="./img/ruta-venecia.jpg">
-            <div class="tour-info">
-                <h3>Route through Venice</h3>
-                <p>Ride a gondola through the canals, visit St. Mark's Square and enjoy the unique beauty of
-                    this floating city.</p>
-                <p><strong>Duration:</strong> 7 hours</p>
-                <p><strong>Includes:</strong> Guide, gondola ride</p>
-                <p><strong>Price:</strong> €70</p>
+            <div class="tour-card">
+                <img src="./img/ruta-roma.jpg" alt="Rome Route">
+                <div class="tour-info">
+                    <h3>Route through Rome</h3>
+                    <p class="tour-description">Explore the Eternal City by visiting the Colosseum, Roman Forum and Vatican City, full of
+                        history and culture.</p>
+                    <p class="tour-detail"><i class="far fa-clock"></i> <strong>Duration:</strong> 10 hours</p>
+                    <p class="tour-detail"><i class="fas fa-hand-holding-usd"></i> <strong>Includes:</strong> Transportation, tour guide</p>
+                    <p class="tour-price"><strong>Price:</strong> €50</p>
+                    <a href="#" class="tour-button">View Details</a>
+                </div>
             </div>
-        </div>
-    </section>
+
+            <div class="tour-card">
+                <img src="./img/ruta-venecia.jpg" alt="Venice Route">
+                <div class="tour-info">
+                    <h3>Route through Venice</h3>
+                    <p class="tour-description">Ride a gondola through the canals, visit St. Mark's Square and enjoy the unique beauty of
+                        this floating city.</p>
+                    <p class="tour-detail"><i class="far fa-clock"></i> <strong>Duration:</strong> 7 hours</p>
+                    <p class="tour-detail"><i class="fas fa-hand-holding-usd"></i> <strong>Includes:</strong> Guide, gondola ride</p>
+                    <p class="tour-price"><strong>Price:</strong> €70</p>
+                    <a href="#" class="tour-button">View Details</a>
+                </div>
+            </div>
+        </div> </section>
+
     <div class="intereses">
         <h2>INTERESTS</h2>
         <h1>What are you interested in?</h1>
-        <p>We offer a wide range of activities to suit your interests and preferences. From cultural experiences</br> to
+        <p>We offer a wide range of activities to suit your interests and preferences. From cultural experiences<br> to
             adventure sports, we have something for everyone.</p>
     </div>
     <div class="nature" id="nature">
@@ -136,38 +142,48 @@
     </div>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-image">
-                <img src="./img/footer.jpg">
-            </div>
-
-            <div class="footer-content">
-                <div class="footer-text">
-                    <h3>About us</h3>
-                    <p>
-                        Dedicated to offering unique experiences to our clients,</br> we take you to explore
-                        best of Italy.
-                        </br>Discover history, culture and stunning landscapes on each tour.
+        <div class="main-footer">
+            <div class="footer-content-wrapper">
+                <div class="footer-brand">
+                    <a href="./index.html" class="site-logo footer-logo">
+                        <img src="./img/italia.png" alt="Logo Italy">
+                        ITALY
+                    </a>
+                    <p class="brand-description">
+                        Your journey to the heart of Italy begins here. Discover unforgettable experiences.
                     </p>
                 </div>
-
-                <div class="footer-details">
-                    <h3>Additional information</h3>
-                    <p>
-                        Telephone: +39 123 456 789 <br>
-                        Email: tourismoffice@gmail.com <br>
-                        Office Hours: Monday to Friday, 9:00 AM - 6:00 PM
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="./tours.html">Tours</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-info">
+                    <h3>Contact Us</h3>
+                    <p class="contact-detail">
+                        <i class="fas fa-phone-alt"></i> +39 123 456 789
+                    </p>
+                    <p class="contact-detail">
+                        <i class="fas fa-envelope"></i> tourismoffice@gmail.com
+                    </p>
+                    <p class="contact-detail">
+                        <i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM
                     </p>
                 </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <p class="social-cta">Stay connected for exclusive updates & news!</p>
+                </div>
             </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>Tournée in Italia 2025. Tutti i diritti riservati.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tournée in Italia. All rights reserved.</p>
+                <p class="legal-links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
         </div>
     </footer>
-
-
 </body>
-
 </html>
